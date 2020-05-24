@@ -24,12 +24,6 @@ public class Menu {
        //panel General con un borderlayout
        Panel panelGeneral=new Panel(layout);
         
-       //panel Secunadrio 
-       //Panel panelCentro=new Panel();
-       
-       //Flowlayout
-       //FlowLayout opcionesMenu=new FlowLayout();
-       
        //declarar botones 
        Button boton1=new Button("Registrar");
        Button boton2=new Button("Borrar");
