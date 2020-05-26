@@ -5,7 +5,7 @@ Crea interfaces gráficas de usuario empleando técnicas de modelado de objetos.
     package ec.edu.ups.menu;
 **Import**
 
-impportamos todas las clases awt para poder hacer nuestra ventana de menu.
+importamos todas las clases awt para poder crear nuestra ventana de menú.
 
     import java.awt.*;
 @author Dutan2000
@@ -15,31 +15,30 @@ impportamos todas las clases awt para poder hacer nuestra ventana de menu.
 
  **Frame** 
  
-primero se crea un marco para poder guardar todos nuestro botones y paneles dentro del el. Para esto creamos una new Frame() y dentro de este marco vamos a añadir nuestros botones y paneles para que usuario pueda interactuar con el menu.  
+primero se crea un marco para poder guardar todos nuestro botones y paneles dentro del el. Para esto creamos un new Frame() y dentro de este marco vamos a añadir nuestros botones y paneles para que usuario pueda interactuar con el menú.  
  
         Frame miventana=new Frame();
        
-Con los diversos metodos que tiene la clase Frame usuamos .setTitle y .setSize para nombrar el marco y para establecer un tamaño en especifico 
+Con los diversos métodos que tiene la clase Frame usamos .setTitle y .setSize para nombrar el marco y para establecer un tamaño en especifico del marco.
 
         miventana.setTitle("Telefono ");
         miventana.setSize(600,400);
         
 **GridLayout** 
 
-Creamos un new GridLayout() para que ordene nuestro menu en forma de tabla. En este caso el GridLayout necesita dos valores dentro de sus parametros para poder crear la tabla. de los valores que se ingresan dentro de los parentesis, el primero valor representa en numero de filas y el segundo valor representa el numero de columnas.    
+Creamos un new GridLayout () para que ordene nuestro menú en forma de tabla. En este caso el GridLayout necesita dos valores dentro de sus parámetros para poder crear la tabla. Los valores que se ingresan dentro de los paréntesis definen los siguiente: el primero valor representa en numero de filas y el segundo valor representa el numero de columnas.    
 
        GridLayout layout=new GridLayout(5, 1);
        
 **Panel** 
 
-Ya que establecimos como queremos que ordenemos nuestro menu debemos crear un panel. Ahora recordemos que la manera en la que queremos que nuestro menu se ordene no esta incoporado todavia asi que anadimos el GridLayout al momento que se instancia el panel
+Ya que establecimos como queremos que ordenemos nuestro menú debemos crear un panel. Ahora recordemos que la manera en la que queremos que nuestro menú se ordene no esta incorporado todavía así que añadimos el GridLayout al momento que se instancia el panel
 
        Panel panelGeneral=new Panel(layout);
 
 **Botones** 
 
-Nuestro menu debe tener diversas opciones, asi que dependiendo de cuantas opciones se va a necesitar seguimo creando new Button()
-para no confundirnos al momento de vidualizar el boton en la interface podemos nombrar nuestros botones para poder identificarlos mas facilmente. La clase Button permite que se ingrese un string en sus parametros para poder nombrar al boton. 
+Nuestro menú debe tener diversas opciones, así que dependiendo de cuantas opciones se va a necesitar seguimos creando new Button() para no confundirnos al momento de visualizar el botón en la interface podemos nombrar nuestros botones para poder identificarlos mas fácilmente. La clase Button permite que se ingrese un string en sus parámetros para poder nombrar al botón.
 
        Button boton1=new Button("Registrar");
        Button boton2=new Button("Borrar");
@@ -56,8 +55,7 @@ PRECAUCION: El orden en el que se ingresan los botones es el orden en la que usu
        panelGeneral.add(boton4);
        panelGeneral.add(boton5);
        
-Ya que ingresamos nuestros botones en el orden que ceremos que se visualizen en nuestro panel. Lo ultimo que nos faltaria es ingresar nuestro panel dentro de nuestro marco. la clase Frame tambien tiene metodo .add() asi que utilizaremos el metodo para añadir nuestro panel. 
-Algo muy importante que no se debe olvidar es permitir que el usuario los visualize, porque si coremos el programa ninguna ventana se desplazara. Para esto utilizamos el metodo .setVisible() que permite que el usuario visualize la ventana. Dentro de los parametros de este metodo se ingresa un nollean la cual si es "true" permite visualizar la ventana, caso contraior no se visualizara nada. 
+Ya que ingresamos nuestros botones en el orden que queremos que se visualicen en nuestro panel. Lo ultimo que nos faltaría es ingresar nuestro panel dentro de nuestro marco. la clase Frame también tiene metodo .add() así que utilizaremos el metodo para añadir nuestro panel. Algo muy importante que no se debe olvidar es permitir que el usuario los visualice, porque si corremos el programa ninguna ventana se desplazara. Para esto utilizamos el metodo .setVisible() que permite que el usuario visualice la ventana. Dentro de los parámetros de este metodo se ingresa un bolean la cual si es "true" permite visualizar la ventana, caso contrario no se visualizará nada. 
 
        miventana.add(panelGeneral);
        miventana.setVisible(true);
