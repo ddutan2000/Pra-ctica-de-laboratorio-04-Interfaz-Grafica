@@ -39,7 +39,7 @@ public class Telefono {
         panelGeneral.add(boton4);
         panelGeneral.add(boton5);
 
-        //añadir panel a marcoy permiteir visualizacion 
+        //añadir panel a marco y permitir visualizacion 
         miventana.add(panelGeneral);
         miventana.setVisible(true);
 
